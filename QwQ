@@ -1,0 +1,15 @@
+  oid  |          rolname          | rolsuper | rolinherit | rolcreaterole | rolcreatedb | rolcanlogin | rolreplication | rolbypassrls | rolconnlimit |             rolpassword             | rolvaliduntil 
+-------+---------------------------+----------+------------+---------------+-------------+-------------+----------------+--------------+--------------+-------------------------------------+---------------
+    10 | postgres                  | t        | t          | t             | t           | t           | t              | t            |           -1 |                                     | 
+  3373 | pg_monitor                | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  3374 | pg_read_all_settings      | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  3375 | pg_read_all_stats         | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  3377 | pg_stat_scan_tables       | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  4569 | pg_read_server_files      | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  4570 | pg_write_server_files     | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  4571 | pg_execute_server_program | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+  4200 | pg_signal_backend         | f        | t          | f             | f           | f           | f              | f            |           -1 |                                     | 
+ 16385 | jon                       | t        | t          | f             | f           | t           | f              | f            |           -1 | md5277a991d48e6925937b89c75840c43cc | 
+ 16386 | bookstore5                | f        | t          | f             | t           | t           | f              | f            |           -1 | md53283a0e616e626cee7244dd0017b3e36 | 
+(11 rows)
+
