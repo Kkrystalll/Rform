@@ -1,2 +1,3 @@
-web: bundle exec rails server -p $PORT
-worker: bundle exec rake jobs:workd
+
+run_server: bin/rails s -p 3000
+run_webpacker: bin/webpack-dev-server
