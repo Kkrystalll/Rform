@@ -14,12 +14,24 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+ default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see Rails configuration guide
+#   # https://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+adapter: postgresql
+  database: postgres
+  # 環境變數：只存在於本機環境，不會部屬到網路
+  # dotenv gem
+  username: <%= ENV.fetch("api_key) %>
+  password: <%= ENV.fetch("db_password") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") %>
+  timeout: 5000
+
+  host: localhost
+  port: 5432
 
 development:
   <<: *default
@@ -80,7 +92,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+# 部署雲端的環境
+# 如果有推到 heroku 會自動給一個帳密
   <<: *default
-  database: Rform_production
+  database: postgres
   username: Rform
   password: <%= ENV['RFORM_DATABASE_PASSWORD'] %>
