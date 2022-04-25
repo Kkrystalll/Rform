@@ -50,6 +50,6 @@ export default class extends Controller {
     this.timeTarget.classList.add("hidden");
     this.rangeTarget.classList.add("hidden");
     this.fileTarget.classList.add("hidden");
-    // this.imageTarget.classList.add("hidden");
+    this.imageTarget.classList.add("hidden");
   }
 }
