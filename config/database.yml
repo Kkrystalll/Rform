@@ -22,11 +22,11 @@
 #   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 adapter: postgresql
-  database: postgres
+  # database: postgres
   # 環境變數：只存在於本機環境，不會部屬到網路
   # dotenv gem
-  username: <%= ENV.fetch("api_key) %>
-  password: <%= ENV.fetch("db_password") %>
+  # username: <%= ENV.fetch("api_key) %>
+  # password: <%= ENV.fetch("db_password") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") %>
   timeout: 5000
 
