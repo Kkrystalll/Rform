@@ -54,6 +54,7 @@ class QuestionnairesController < ApplicationController
   # DELETE /questionnaires/1 or /questionnaires/1.json
   def destroy
     @questionnaire.destroy
+    # @questionnaire.update(deleted_at: Time.current)
 
     respond_to do |format|
       format.html { redirect_to questionnaires_url, notice: "Questionnaire was successfully destroyed." }
